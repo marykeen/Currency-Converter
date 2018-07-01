@@ -6,7 +6,7 @@
 		<title>Currency Converter</title>
 		<link rel="stylesheet" href="index.css">
 	</head>
-	<body>
+		<body onload="currencies()">
 		<div class="header">
 			<img src="img/currency1.jpg"> 
 			<h1 align="center">My Currency Converter</h1>
@@ -19,10 +19,11 @@
 			<div id ="conversion_form" style="background-image: url('img/logo.jpeg'); background-repeat: no-repeat; background-size:100% 100%;" align="right">
 
 					<form>
-						<input type = "text" placeholder="Converting from"><br>
-						<input type = "number" placeholder="Converting to" maxlength="11"><br>
-						<input type = "email" placeholder="Amount"><br>
-						
+
+						<select  id="converting_from" onchange="convertCurrency()"></select><br>
+						<select  id="converting_to" onchange="convertCurrency()"></select><br>
+						<input placeholder="Amount" id="amount"><br>
+						<input type = "text" id="result"><br>
 						<button type="submit">Convert</button>
 
 					</form>
@@ -32,6 +33,9 @@
 			
 		</div>
 
-		<script src="js/script.js"></script>
+		
 	</body>
+	 
+	<script src="js/index.js"></script>
+		<script src="sw.js"></script>
 </html>
